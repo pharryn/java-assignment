@@ -1,13 +1,13 @@
 import java.text.DecimalFormat;
 import java.util.Scanner;
 
-class Payroll {
+class PayrollModel {
     private String name;
     private int idNumber;
     private double rate;
     private int hours;
 
-    public Payroll(String employeeName, int id) {
+    public PayrollModel(String employeeName, int id) {
         name = employeeName;
         idNumber = id;
     }
@@ -49,7 +49,7 @@ class Payroll {
     }
 }
 
-public class PayrollDemonstrate {
+public class Payroll {
 
     public static void main(String[] args) {
         String name;
@@ -61,25 +61,24 @@ public class PayrollDemonstrate {
         Scanner input = new Scanner(System.in);
         DecimalFormat df = new DecimalFormat("#.00");
 
-        System.out.print("\nEnter employee name: ");
+        System.out.print("Enter employee's name:");
         name = input.nextLine();
 
-        System.out.print("\nEnter employee id: ");
+        System.out.print("Enter employee's ID number:");
         id = input.nextInt();
 
-        System.out.print("\nEnter pay rate: ");
+        System.out.print("Enter hourly rate:");
         payRate = input.nextDouble();
 
-        System.out.print("\nEnter number of hours worked: ");
+        System.out.print("Enter number of hours worked:");
         hoursWorked = input.nextInt();
 
-        Payroll obj = new Payroll(name, id);
+        PayrollModel obj = new PayrollModel(name, id);
         obj.setHours(hoursWorked);
         obj.setRate(payRate);
         grossPay = obj.grossPay();
 
-        System.out.printf("\n%s, employee number %d , made $%s in grosspay.%n", obj.getName(), obj.getIdNumber(), df.format(grossPay));
-
+        System.out.printf("%s, employee number %d, made $%01.2f in gross pay.", obj.getName(), obj.getIdNumber(), grossPay);
     }
 
 }
