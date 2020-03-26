@@ -6,9 +6,9 @@ class Payroll {
     private double rate;
     private int hours;
 
-    public Payroll(String employeeName, int iD) {
+    public Payroll(String employeeName, int id) {
         name = employeeName;
-        idNumber = iD;
+        idNumber = id;
     }
 
     public String getName() {
