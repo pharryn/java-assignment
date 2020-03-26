@@ -1,9 +1,9 @@
 package com.phani.assignment01;
 
 class Car {
-    int yearModel;
-    String make;
-    int speed;
+    private int yearModel;
+    private String make;
+    private int speed;
 
     Car(int yearModel, String make) {
         this.yearModel = yearModel;
@@ -23,11 +23,11 @@ class Car {
         return speed;
     }
 
-    void Accelerate() {
-        this.speed = this.speed + 5;
+    void accelerate() {
+        this.speed += 5;
     }
 
     void Brake() {
-        this.speed = this.speed - 5;
+        this.speed -= 5;
     }
 }
