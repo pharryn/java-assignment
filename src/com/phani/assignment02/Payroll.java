@@ -1,60 +1,48 @@
 package com.phani.assignment02;
 
 class Payroll {
-    String name; //a String containing the employee's name
-    int idNumber; //an integer representing the employee's ID number
-    double rate; //a double containing the employee's hourly pay rate
-    int hours; //an integer representing the number of hours this employee has worked
+    private String name;
+    private int idNumber;
+    private double rate;
+    private int hours;
 
-    //constructor that takes employee name and id as arguments
-    public Payroll(String empName, int ID) {
-        name = empName;
-        idNumber = ID;
+    public Payroll(String employeeName, int iD) {
+        name = employeeName;
+        idNumber = iD;
     }
 
-    //Accessors
-    //method that returns employee name
     public String getName() {
         return name;
     }
 
-    //Mutators
-    //method to assign employee name
     public void setName(String empName) {
         name = empName;
     }
 
-    //method that returns employee id
-    public int getidNumber() {
+    public int getIdNumber() {
         return idNumber;
     }
 
-    //method that returns rate
-    public double getRate() {
-        return rate;
-    }
-
-    //method to set hourly pay rate
-    public void setRate(double r) {
-        rate = r;
-    }
-
-    //method that returns hours
-    public int hours() {
-        return hours;
-    }
-
-    //method to assign IDNumber
     public void setIdNumber(int id) {
         idNumber = id;
     }
 
-    //method to set number of hours employee has worked
+    public double getRate() {
+        return rate;
+    }
+
+    public void setRate(double r) {
+        rate = r;
+    }
+
+    public int getHours() {
+        return hours;
+    }
+
     public void setHours(int h) {
         hours = h;
     }
 
-    //method that returns gross pay
     public double grossPay() {
         return (hours * rate);
     }
